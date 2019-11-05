@@ -13,5 +13,7 @@ public class Mallet{
 		this.length = 5;
 		this.width = 5;}
 	
-	protected void hit(){}
+	protected void hit(Hole hole){
+		hole.hit();
+	}
 }

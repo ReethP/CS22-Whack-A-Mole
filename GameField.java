@@ -18,4 +18,17 @@ public class GameField{
 	protected void addScore(int score){
 		this.score+=score;
 	}
+
+	protected void printGame(){
+		for(int i=0;i<6;i++){
+			if(!holes[i].hasMole()){System.out.print("[ ]");}
+			else System.out.print("[M]");
+		}
+		System.out.println("\n");
+	}
+
+	protected void makeMoles(){
+		for(int i=0;i<6;i++){
+			this.holes[i].tryUnhideMole();}
+	}
 }
